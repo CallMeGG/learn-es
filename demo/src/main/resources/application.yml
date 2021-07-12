@@ -1,0 +1,8 @@
+server:
+  port: 8888
+  servlet:
+    context-path: /test-es
+spring:
+  elasticsearch:
+    rest:
+      uris: 101.200.87.141:9200
