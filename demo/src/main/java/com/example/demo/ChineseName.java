@@ -32,15 +32,14 @@ public class ChineseName {
             "毋丘", "贺兰", "綦毋", "屋庐", "独孤", "南郭", "北宫", "王孙"};
 
     private static void main(String[] args) {
-        System.out.println(getNewName());
+        System.out.println(getName());
     }
 
-    public static String getNewName() {
+    public static String getName() {
         Random random = new Random(System.currentTimeMillis());
         /* 598 百家姓 */
 
-        int index = random.nextInt(Surname.length - 1);
-        String name = Surname[index]; //获得一个随机的姓氏
+        String name = ""; //
 
         /* 从常用字中选取一个或两个字作为名 */
         if (random.nextBoolean()) {
@@ -49,6 +48,14 @@ public class ChineseName {
             name += getChinese();
         }
         return name;
+    }
+
+    public static String getFirstName() {
+        Random random = new Random(System.currentTimeMillis());
+        /* 598 百家姓 */
+
+        int index = random.nextInt(Surname.length - 1);
+        return Surname[index]; //获得一个随机的姓氏
     }
 
     private static String getChinese() {
